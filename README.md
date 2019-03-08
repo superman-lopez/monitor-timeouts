@@ -21,4 +21,4 @@ This will run the monitor script for 1 minute.  Alternatively the number of minu
 This will run the monitor script for 60 minutes.
 
 ### Compatibility
-This script and the installation instructions has been tested on macOS running Bash version 3 and Ubuntu Linux running Bash version 4.  I expect you can run this script and the installation instructions on most systems running Bash, without problems.
+This script and the installation instructions has been tested on macOS running Bash version 3, Ubuntu Linux running Bash version 4, Synology DSM 6 running Bash version 4.  I expect you can run this script and the installation instructions on most systems running Bash, without problems.
