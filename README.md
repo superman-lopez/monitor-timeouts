@@ -4,7 +4,7 @@ Simple bash script that uses pings to checks network disconnects
 
 To download this bash script and give it the correct permissions:
 ```
-curl -o https://raw.githubusercontent.com/superman-lopez/monitor-timeouts/master/monitor-timeouts.sh && chmod +x monitor-timeouts.sh
+curl -O https://raw.githubusercontent.com/superman-lopez/monitor-timeouts/master/monitor-timeouts.sh && chmod +x monitor-timeouts.sh
 ```
 
 ## Usage
