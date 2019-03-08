@@ -1,3 +1,4 @@
+#!/bin/bash
 start=`date +%s`
 minutes=""
 timeouts=0
@@ -14,7 +15,7 @@ while [ $(( $(date +%s) - (60 * minutes) )) -lt $start ]
 do
 	ping=`ping google.com -c 1 | head -5`
 
-	if [[ $ping == *"0 packets received"* ]]; then
+	if [[ $ping == *"100% packet loss"* | $ping == *"100.0% packet loss"* ]]; then
 		date
 		echo $ping
 		((timeouts++))
