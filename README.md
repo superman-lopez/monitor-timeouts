@@ -1,5 +1,5 @@
 # monitor-timeouts
-Simple bash script that uses pings to checks network disconnects
+Simple bash script that uses ping for timeouts as a way to determine network disconnects
 ## Install
 
 To download this bash script and give it the correct permissions:
