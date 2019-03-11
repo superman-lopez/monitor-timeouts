@@ -19,5 +19,5 @@ fi
 
 echo "Start monitor for network timeouts at `date` for $minutes minute(s)."
 echo "Target host: $target"
-ping $target -i 1 -c $pings $extraflag | grep "timeout\|unreachable\|no answer\|statistics\|transmitted\|avg"
+ping $target -i 1 -c $pings $extraflag | grep -i "timeout\|unreachable\|no answer\|statistics\|transmitted\|avg"
 echo "End monitoring at `date`."
