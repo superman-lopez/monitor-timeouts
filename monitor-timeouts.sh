@@ -1,25 +1,23 @@
 #!/bin/bash
-start=`date +%s`
-minutes=""
-timeouts=0
+#Usage: ./monitor-timeouts.sh [target] [duration]
+#where [target] can be host name or ip address, if left blank "google.com" will be used
+#and where [duration] is duration of monitoring in minutes, if left blank 1 minute will be used
+#example: ./monitor-timeouts.sh 192.168.1.1 10
+target=$1
+minutes=$2
+pings=$((60 * $minutes))
 
 if [ $# -eq 0 ]; then
+	target=google.com
 	minutes=1
-else
-	minutes=$1
+	ping=60
+fi
+if [ -z "$2" ]; then
+    minutes=1
+	pings=60
 fi
 
-echo "Start monitor for network timeouts at `date` for $minutes minute(s)"
-
-while [ $(( $(date +%s) - (60 * minutes) )) -lt $start ]
-do
-	ping=`ping google.com -c 1 | head -5`
-
-	if [[ $ping == *"100% packet loss"* ]] || [[ $ping == *"100.0% packet loss"* ]]; then
-		date
-		echo $ping
-		((timeouts++))
-	fi
-done
-
-echo "End monitoring at `date`.  Total timeouts recorded: $timeouts"
+echo "Start monitor for network timeouts at `date` for $minutes minute(s)."
+echo "Target host: $target"
+ping $target -i 1 -c $pings | grep "timeout\|statistics\|transmitted\|avg"
+echo "End monitoring at `date`."
