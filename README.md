@@ -21,4 +21,4 @@ This will run the monitor script for 1 minute and target google.com.  Alternativ
 This will run the monitor script for 60 minutes with 192.168.1.1 as the target of the pings. *Duration as an approximation: the command is actually 60 pings per minute multiplied with the requested duration.  Actual duration might be longer or shorter depending on the ping results.*
 
 ### Compatibility
-This script and the installation instructions has been tested on macOS running Bash version 3, Ubuntu Linux running Bash version 4, Synology DSM running Bash version 4.  I expect you can run this script and the installation instructions on most systems running Bash, without problems.
+This script and the installation instructions has been tested on macOS running Bash version 3, Ubuntu Linux running Bash version 4, Synology DSM running Bash version 4.  I expect you can run this script and the installation instructions on most systems running Bash, without problems.  On some systems you might need to run the command with elevated rights (`sudo`).
