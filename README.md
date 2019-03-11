@@ -1,5 +1,5 @@
 # monitor-timeouts
-Simple bash script that uses ping timeouts as a way to determine network disconnects.  It uses google.com as the domain to ping, this can be easily edited in the script.
+Simple bash script that uses ping timeouts as a way to determine network disconnects.  By default it uses google.com as the domain to ping, alternatively a target can be included as parameter.
 ## Install
 
 To download this bash script and give it the correct permissions:
@@ -14,9 +14,9 @@ The bash script can be run without parameters as:
 ./monitor-timeouts.sh
 ```
 
-This will run the monitor script for 1 minute.  Alternatively the number of minutes for which the script should run can be passed as parameter:
+This will run the monitor script for 1 minute and target google.com.  Alternatively a target and the number of minutes for which the script should run can be passed as parameters:
 ```
-./monitor-timeouts.sh 60
+./monitor-timeouts.sh 192.168.1.1 60
 ```
 This will run the monitor script for 60 minutes.
 
