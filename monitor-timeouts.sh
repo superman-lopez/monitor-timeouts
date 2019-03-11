@@ -1,13 +1,14 @@
 #!/bin/bash
-#Usage: ./monitor-timeouts.sh [target] [duration]
-#example: ./monitor-timeouts.sh 192.168.1.1 10
-target=$1
-minutes=$2
+#Usage: ./monitor-timeouts.sh [duration] [target]
+#example: ./monitor-timeouts.sh 60 192.168.1.1
+minutes=$1
+target=$2
 if [ $# -eq 0 ]; then
+	minutes=1
 	target=google.com
 fi
 if [ -z "$2" ]; then
-	minutes=1
+	target=google.com
 fi
 pings=$((60 * $minutes))
 
