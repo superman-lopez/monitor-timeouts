@@ -14,5 +14,5 @@ pings=$((60 * $minutes))
 
 echo "Start monitor for network timeouts at `date` for $minutes minute(s)."
 echo "Target host: $target"
-ping $target -i 1 -c $pings | grep "timeout\|unreachable\|statistics\|transmitted\|avg"
+ping $target -i 1 -c $pings | grep -i "timeout\|unreachable\|statistics\|transmitted\|avg"
 echo "End monitoring at `date`."
