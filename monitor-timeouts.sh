@@ -1,7 +1,5 @@
 #!/bin/bash
 #Usage: ./monitor-timeouts.sh [target] [duration]
-#where [target] can be host name or ip address, if left blank "google.com" will be used
-#and where [duration] is duration of monitoring in minutes, if left blank 1 minute will be used
 #example: ./monitor-timeouts.sh 192.168.1.1 10
 target=$1
 minutes=$2
