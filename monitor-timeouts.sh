@@ -5,17 +5,14 @@
 #example: ./monitor-timeouts.sh 192.168.1.1 10
 target=$1
 minutes=$2
-pings=$((60 * $minutes))
-
 if [ $# -eq 0 ]; then
 	target=google.com
 	minutes=1
-	ping=60
 fi
 if [ -z "$2" ]; then
     minutes=1
-	pings=60
 fi
+pings=$((60 * $minutes))
 
 echo "Start monitor for network timeouts at `date` for $minutes minute(s)."
 echo "Target host: $target"
