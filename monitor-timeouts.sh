@@ -7,10 +7,9 @@ target=$1
 minutes=$2
 if [ $# -eq 0 ]; then
 	target=google.com
-	minutes=1
 fi
 if [ -z "$2" ]; then
-    minutes=1
+	minutes=1
 fi
 pings=$((60 * $minutes))
 
