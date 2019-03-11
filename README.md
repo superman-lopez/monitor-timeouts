@@ -14,9 +14,9 @@ The bash script can be run without parameters as:
 ./monitor-timeouts.sh
 ```
 
-This will run the monitor script for 1 minute and target google.com.  Alternatively a target and the number of minutes for which the script should run can be passed as parameters `./monitor-timeouts.sh [target] [duration]`:
+This will run the monitor script for 1 minute and target google.com.  Alternatively a target and the number of minutes for which the script should run can be passed as parameters `./monitor-timeouts.sh [duration] [target]`:
 ```
-./monitor-timeouts.sh 192.168.1.1 60
+./monitor-timeouts.sh 60 192.168.1.1
 ```
 This will run the monitor script for 60 minutes.
 
