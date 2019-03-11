@@ -12,7 +12,12 @@ if [ -z "$2" ]; then
 fi
 pings=$((60 * $minutes))
 
+system=`uname`
+if [[ $system == *"Linux"* ]]; then
+	extraflag="-O"
+fi
+
 echo "Start monitor for network timeouts at `date` for $minutes minute(s)."
 echo "Target host: $target"
-ping $target -i 1 -c $pings | grep -i "timeout\|unreachable\|statistics\|transmitted\|avg"
+ping $target -i 1 -c $pings $extraflag | grep "timeout\|unreachable\|no answer\|statistics\|transmitted\|avg"
 echo "End monitoring at `date`."
